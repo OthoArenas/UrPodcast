@@ -42,4 +42,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Post');
     }
+
+    /* Relación Uno a Muchos */
+    public function broadcasts()
+    {
+        return $this->hasMany('App\Broadcast');
+    }
 }

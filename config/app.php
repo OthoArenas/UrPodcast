@@ -1,5 +1,7 @@
 <?php
 
+use App\Providers\EndBroadcastServiceProvider;
+
 return [
 
     /*
@@ -67,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Mexico_City',
 
     /*
     |--------------------------------------------------------------------------
@@ -175,6 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\FormatTimeServiceProvider::class,
+        App\Providers\EndBroadcastServiceProvider::class,
 
     ],
 
@@ -227,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'FormatTime' => App\Helpers\FormatTime::class,
+        'EndBroadcast' => App\Helpers\EndBroadcast::class,
 
     ],
 

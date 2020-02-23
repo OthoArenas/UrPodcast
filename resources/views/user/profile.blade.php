@@ -23,6 +23,12 @@
             </div>
             <hr>
 
+            <h3 class="text-center">Próximamente transmitirá</h3>
+            @foreach($broadcasts as $broadcast)
+                @include('includes.broadcast',['broadcast'=>$broadcast])
+            @endforeach
+            <hr>
+
             <h3 class="text-center">Podcast de {{$user->name}}</h3>
             @foreach($user->posts as $post)
                 @include('includes.post',['post'=>$post])

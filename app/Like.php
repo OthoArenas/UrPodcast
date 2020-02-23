@@ -18,4 +18,10 @@ class Like extends Model
     {
         return $this->belongsTo('App\Post', 'post_id');
     }
+
+    /* Relación Muchos a Uno */
+    public function broadcast()
+    {
+        return $this->belongsTo('App\Broadcast', 'post_id');
+    }
 }

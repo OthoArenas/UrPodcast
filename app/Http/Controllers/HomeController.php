@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Broadcast;
+use App\Http\Controllers\BroadcastController;
 
 class HomeController extends Controller
 {
@@ -24,10 +26,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id','desc')->paginate(5);
+        $posts = Post::orderBy('id', 'desc')->paginate(5);
+        $broadcasts = Broadcast::orderBy('starts_at', 'asc')->paginate(5);
 
-        return view('home',[
-            'posts' => $posts
+        /* Terminar automáticamentebroadcast si ha caducado su tiempo */
+        /* foreach ($broadcasts as $broadcast) {
+            if (strtotime(now()) >= (strtotime($broadcast->starts_at) + 4500)) {
+                end($broadcast->id);
+            }
+        } */
+
+        return view('home', [
+            'posts' => $posts,
+            'broadcasts' => $broadcasts
         ]);
     }
 }

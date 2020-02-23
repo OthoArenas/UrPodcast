@@ -73,7 +73,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{route('podcast.broadcast')}}">
+                                    <a class="dropdown-item" href="{{route('broadcast.create')}}">
                                         <i class="fas fa-broadcast-tower mr-2"></i>{{ __('Broadcast Live') }}
                                     </a>
                                     <a class="dropdown-item" href="{{route('user.profile',['id'=>\Auth::user()->id])}}">

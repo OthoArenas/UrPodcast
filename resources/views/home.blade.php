@@ -5,6 +5,17 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             @include('includes.showmessage')
+            <h2 class="text-center">Próximas transmisiones en vivo</h2>
+            @foreach($broadcasts as $broadcast)
+                @if(strtotime(now()) >= (strtotime($broadcast->starts_at) + 4500))
+                @php
+                    EndBroadcast::EndBroadcast($broadcast->id);
+                @endphp
+                @endif
+                @include('includes.broadcast',['broadcast'=>$broadcast])
+            @endforeach
+            <hr>
+            <h2 class="text-center">Podcasts de la comunidad</h2>
             @foreach($posts as $post)
                 @include('includes.post',['post'=>$post])
             @endforeach

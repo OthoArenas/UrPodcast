@@ -19,25 +19,32 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/configuration', 'UserController@config')->name('config');
 Route::get('/user/profilepic/{filename}', 'UserController@getImage')->name('user.image');
 Route::post('/user/update', 'UserController@update')->name('user.update');
-Route::get('/profile/{id}','UserController@profile')->name('user.profile');
+Route::get('/profile/{id}', 'UserController@profile')->name('user.profile');
 Route::get('/users/{search?}', 'UserController@index')->name('user.index');
 
 /* Rutas para Comentarios */
-Route::post('/comment/save','CommentController@save')->name('comment.save');
+Route::post('/comment/save', 'CommentController@save')->name('comment.save');
 Route::get('/comment/delete/{id}', 'CommentController@delete')->name('comment.delete');
 
 /* Rutas para Likes */
-Route::get('/like/{post_id}','LikeController@like')->name('like.save');
-Route::get('/dislike/{post_id}','LikeController@dislike')->name('like.delete');
+Route::get('/like/{post_id}', 'LikeController@like')->name('like.save');
+Route::get('/dislike/{post_id}', 'LikeController@dislike')->name('like.delete');
 Route::get('/likes', 'LikeController@index')->name('likes.index');
 
 /* Rutas para Podcasts */
-Route::get('/upload-podcast','PodcastController@create')->name('podcast.create');
-Route::post('/podcast/save','PodcastController@save')->name('podcast.save');
+Route::get('/upload-podcast', 'PodcastController@create')->name('podcast.create');
+Route::post('/podcast/save', 'PodcastController@save')->name('podcast.save');
 Route::get('/podcast/file/{filename}', 'PodcastController@getPost')->name('podcast.file');
 Route::get('/podcast/{id}', 'PodcastController@detail')->name('podcast.detail');
 Route::get('/podcast/delete/{id}', 'PodcastController@delete')->name('podcast.delete');
 Route::get('/podcast/edit/{id}', 'PodcastController@edit')->name('podcast.edit');
-Route::post('/podcast/edit','PodcastController@update')->name('podcast.update');
-Route::get('/broadcast','PodcastController@broadcast')->name('podcast.broadcast');
+Route::post('/podcast/edit', 'PodcastController@update')->name('podcast.update');
 
+/* Rutas para Broadcasts */
+Route::get('/broadcast', 'BroadcastController@create')->name('broadcast.create');
+Route::post('/broadcast/save', 'BroadcastController@save')->name('broadcast.save');
+Route::get('/broadcast/{id}', 'BroadcastController@detail')->name('broadcast.detail');
+Route::get('/broadcast/delete/{id}', 'BroadcastController@delete')->name('broadcast.delete');
+Route::get('/broadcast/edit/{id}', 'BroadcastController@edit')->name('broadcast.edit');
+Route::post('/broadcast/edit', 'BroadcastController@update')->name('broadcast.update');
+Route::get('/broadcast/end/{id}', 'BroadcastController@end')->name('broadcast.end');

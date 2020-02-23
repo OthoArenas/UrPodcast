@@ -12,22 +12,21 @@ use App\Like;
 
 class PodcastController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('auth');
     }
 
-    public function create(){
+    public function create()
+    {
         return view('podcast.create');
     }
 
-    public function broadcast(){
-        return view('podcast.broadcast');
-    }
-
-    public function save(Request $request){
+    public function save(Request $request)
+    {
 
         /* Validación */
-        $validates = $this->validate($request,[
+        $validates = $this->validate($request, [
             'description' => 'required',
             'post_path' => 'required|mimes:audio/mpeg,mpga,mp3,wav,aac'
         ]);
@@ -43,8 +42,8 @@ class PodcastController extends Controller
         $post->description = $description;
 
         /* Subir fichero */
-        if($post_path){
-            $post_path_name = time().$post_path->getClientOriginalName();
+        if ($post_path) {
+            $post_path_name = time() . $post_path->getClientOriginalName();
             Storage::disk('posts')->put($post_path_name, File::get($post_path));
             $post->post_path = $post_path_name;
         }
@@ -57,34 +56,37 @@ class PodcastController extends Controller
         ]);
     }
 
-    public function getPost($filename){
+    public function getPost($filename)
+    {
         $filename = Storage::disk('posts')->get($filename);
         return new Response($filename, 200);
     }
 
-    public function detail($id){
+    public function detail($id)
+    {
         $post = Post::find($id);
-        return view('podcast.detail',[
+        return view('podcast.detail', [
             'post' => $post
         ]);
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $user = \Auth::user();
         $post = Post::find($id);
-        $comments = Comment::where('post_id',$id)->get();
-        $likes = Like::where('post_id',$id)->get();
+        $comments = Comment::where('post_id', $id)->get();
+        $likes = Like::where('post_id', $id)->get();
 
-        if($user && $post && $post->user->id == $user->id){
+        if ($user && $post && $post->user->id == $user->id) {
             /* Eliminar comentarios */
-            if($comments && count($comments)>=1){
-                foreach($comments as $comment){
+            if ($comments && count($comments) >= 1) {
+                foreach ($comments as $comment) {
                     $comment->delete();
                 }
             }
             /* Eliminar likes */
-            if($likes && count($likes)>=1){
-                foreach($likes as $like){
+            if ($likes && count($likes) >= 1) {
+                foreach ($likes as $like) {
                     $like->delete();
                 }
             }
@@ -94,27 +96,29 @@ class PodcastController extends Controller
             $post->delete();
 
             $mensaje = array('mensaje' => 'El podcast se ha borrado correctamente');
-        }else{
+        } else {
             $mensaje = array('mensaje' => 'El podcast no se ha borrado correctamente');
         }
 
         return redirect()->route('home')->with($mensaje);
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $user = \Auth::user();
         $post = Post::find($id);
 
-        if($user && $post && $post->user->id == $user->id){
-            return view('podcast.edit',['post' => $post]);
-        }else{
+        if ($user && $post && $post->user->id == $user->id) {
+            return view('podcast.edit', ['post' => $post]);
+        } else {
             return redirect()->route('home');
         }
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
         /* Validación */
-        $validates = $this->validate($request,[
+        $validates = $this->validate($request, [
             'description' => 'required|string',
             'post_path' => 'mimes:audio/mpeg,mpga,mp3,wav,aac'
         ]);
@@ -128,13 +132,13 @@ class PodcastController extends Controller
         $post->description = $description;
 
         /* Eliminar fichero de audio */
-        if($post_path){
+        if ($post_path) {
             Storage::disk('posts')->delete($post->post_path);
         }
 
         /* Subir fichero */
-        if($post_path){
-            $post_path_name = time().$post_path->getClientOriginalName();
+        if ($post_path) {
+            $post_path_name = time() . $post_path->getClientOriginalName();
             Storage::disk('posts')->put($post_path_name, File::get($post_path));
             $post->post_path = $post_path_name;
         }
@@ -146,5 +150,4 @@ class PodcastController extends Controller
             'mensaje' => 'Podcast actualizado correctamente'
         ]);
     }
-
 }
