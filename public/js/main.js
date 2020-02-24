@@ -1,4 +1,4 @@
-var url = 'http://whispering-mountain-50234.herokuapp.com/public';
+var url = 'http://localhost:8888/Maestria/LaboratorioCSW/public';
 window.addEventListener("load", function (){
     
     $('.btn-like').css('cursor', 'pointer');
