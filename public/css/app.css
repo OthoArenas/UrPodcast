@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https:/fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -16773,8 +16773,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src: url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-solid-900.eot");
-  src: url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-solid-900.woff2") format("woff2"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-solid-900.woff") format("woff"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-solid-900.ttf") format("truetype"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-solid-900.eot");
+  src: url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-solid-900.woff2") format("woff2"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-solid-900.woff") format("woff"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-solid-900.ttf") format("truetype"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-solid-900.svg#fontawesome") format("svg");
 }
 
 .fa,
@@ -16793,8 +16793,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-brands-400.eot");
-  src: url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-brands-400.woff2") format("woff2"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-brands-400.woff") format("woff"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-brands-400.ttf") format("truetype"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+  src: url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-brands-400.eot");
+  src: url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-brands-400.woff2") format("woff2"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-brands-400.woff") format("woff"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-brands-400.ttf") format("truetype"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-brands-400.svg#fontawesome") format("svg");
 }
 
 .fab {
@@ -16812,8 +16812,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-regular-400.eot");
-  src: url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-regular-400.woff2") format("woff2"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-regular-400.woff") format("woff"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-regular-400.ttf") format("truetype"), url("http://whispering-mountain-50234.herokuapp.com/public/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+  src: url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-regular-400.eot");
+  src: url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-regular-400.woff2") format("woff2"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-regular-400.woff") format("woff"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-regular-400.ttf") format("truetype"), url("http://whispering-mountain-50234.herokuapp.com/public/fonts/vendor/@fortawesome/fontawesome-free/fa-regular-400.svg#fontawesome") format("svg");
 }
 
 .far {
