@@ -1,4 +1,4 @@
-var url = 'http://whispering-mountain-50234.herokuapp.com/login/public';
+var url = 'http://whispering-mountain-50234.herokuapp.com/public';
 window.addEventListener("load", function (){
     
     $('.btn-like').css('cursor', 'pointer');
